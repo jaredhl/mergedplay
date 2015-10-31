@@ -1,0 +1,27 @@
+@import play.data.Form
+
+@(studentForm:Form[models.StudentMember])
+@main("Data tests"){
+    @if(studentForm.value.isDefined){
+        <h1>@studentForm.get.firstName</h1>
+        <h2>majors in @studentForm.get.major</h2>
+    } else {
+        <h1>Feed some data</h1>
+        @helper.form(action = routes.Data.post()){
+            @helper.inputText(studentForm("firstName"))
+            @helper.inputText(studentForm("lastName"))
+            @helper.inputText(studentForm("email"))
+            @helper.inputText(studentForm("major"))
+            @helper.inputText(studentForm("minor"))
+            @helper.inputText(studentForm("PID"))
+            @helper.inputRadioGroup(
+                studentForm("classYear"),
+                options = Seq("Freshman"->"Freshman","Sophomore"->"Sophomore","Junior"->"Junior","Senior"->"Senior"),
+                '_label -> "Year",
+                '_error -> None
+            )
+
+            <input type="submit" name="send" value="Feed"/>
+        }
+    }
+}
