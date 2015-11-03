@@ -13,10 +13,10 @@ import play.*;
  * Created by cloftin on 10/31/15.
  */
 public class JDBC extends Controller{
-    public static Result page(){
+    public Result page(){
         return ok(views.html.jdbc.render());
     }
-    public static Result table(){
+    public Result table(){
         try{
             SampleDB.createTestTable();
             return ok("table created");
@@ -25,7 +25,7 @@ public class JDBC extends Controller{
         }
     }
 
-    public static Result test(String value){
+    public Result test(String value){
         try{
             SampleDB.insertTestData(value);
             List<String> vs = SampleDB.getTestData();

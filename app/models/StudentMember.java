@@ -1,13 +1,14 @@
 package models;
 import play.data.validation.Constraints.*;
-
+import javax.persistence.*;
 import java.util.Calendar;
 
 
 /**
  * Created by cloftin on 10/3/15.
  */
-public class StudentMember {
+@Entity
+public class StudentMember extends play.db.ebean.Model{
 
 
     @Required

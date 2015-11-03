@@ -1,11 +1,10 @@
 @()
-@import contollers.JDBC
 @main("jdbc test") {
     <script>
         //JS makes ajax call
         $(function(){
         });
-        </script>
+    </script>
     <style>
     ol li{
         display:none;
@@ -17,7 +16,10 @@
     </style>
     <ol id="jdbcresult">
         <li><a href="@routes.JDBC.table">Create table</a></li>
-        <li><a href="@routes.JDBC.table">Create table</a></li>
-        <li><a href="@routes.JDBC.table">Create table</a></li>
-        <li><a href="@routes.JDBC.table">Create table</a></li>
+        <li><a href="@routes.JDBC.test("don't insert me")">first val</a></li>
+        <li><a href="@routes.JDBC.test("what did I say?")">second val</a></li>
+        <li><a href="@routes.JDBC.test("Grrr")">third val</a></li>
+    </ol>
+    <ul i="result">
+    </ul>
 }

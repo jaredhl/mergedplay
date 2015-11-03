@@ -1,41 +1,19 @@
-New log file opened at Fri Oct 30 11:28:56 EDT 2015 by 10397@dhcp-v80-100953.wireless.unc.edu
-Taking next connection to: 60112
-New client attempting to connect on port: 60113-60112
-  Address = /152.23.67.191:60112
-This client on port 60113 has uuid 7c51d92d-e4dd-4ece-8695-9445209a0c81 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-7c51d92d-e4dd-4ece-8695-9445209a0c81
-Taking next connection to: 60112
+New log file opened at Tue Nov 03 00:27:09 EST 2015 by 51125@Scottys-MacBook-Pro.local
+Taking next connection to: 54401
+New client attempting to connect on port: 54402-54401
+  Address = /192.168.0.197:54401
+This client on port 54402 has uuid 14dfa775-f08e-4624-9c87-da1cc628199d configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-14dfa775-f08e-4624-9c87-da1cc628199d
+Taking next connection to: 54401
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60112
+Taking next connection to: 54401
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60112
-New client attempting to connect on port: 60506-60112
-  Address = /152.23.67.191:60112
-Handshake exception on socket: 60506
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:189)
-	at java.net.SocketInputStream.read(SocketInputStream.java:121)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 60112
-New client attempting to connect on port: 60507-60112
-  Address = /152.23.67.191:60112
-This client on port 60507 has uuid 4a1174b5-a55d-4ebc-87cd-7b3fda187d8c configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-4a1174b5-a55d-4ebc-87cd-7b3fda187d8c
-Taking next connection to: 60112
+Taking next connection to: 54401
 Checking to see if clients are empty...
 No non-daemon clients connected after 3 min. Shutting down.
 Server socket thread exiting.
 0 clients open, will close them...
 All client sockets have been closed.
-Closing the 10397@dhcp-v80-100953.wireless.unc.edu logs at Fri Oct 30 11:40:42 EDT 2015, goodbye.
+Closing the 51125@Scottys-MacBook-Pro.local logs at Tue Nov 03 00:36:09 EST 2015, goodbye.

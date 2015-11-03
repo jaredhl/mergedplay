@@ -3,7 +3,12 @@ package controllers;
 import play.data.Form;
 import play.mvc.Controller;
 import models.*;
-import play.*;
+import play.libs.*;
+import play.data.*;
+import javax.validation.*;
+import static play.data.validation.Constraints.*;
+import static play.mvc.Results.*;
+import play.db.ebean.Model.*;
 import play.mvc.*;
 import play.libs.Scala;
 
@@ -25,6 +30,20 @@ public class Data extends Controller{
 
         return ok(data.render(studentForm));
     }
+
+    @play.db.ebean.Transactional
+    /*public Result post(){
+        Form<StudentMember> boundForm = studentForm.bindFromRequest();
+        if(boundForm.hasErrors()){
+            return badRequest(data.render(boundForm));
+        } else {
+            StudentMember member = boundForm.get();
+            StudentMember existing = StudentMember.findById();
+                    .where()
+                        .eq("firstName", member.firstName)
+                    .findUnique(); //search by firstname
+        }
+    }*/
 
     public Result post(){
         return ok(data.render(studentForm.bindFromRequest()));
