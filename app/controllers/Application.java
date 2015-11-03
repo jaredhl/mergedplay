@@ -14,9 +14,10 @@ public class Application extends Controller{
     @Security.Authenticated(ActionAuthenticator.class)
     public Result index() {
         return ok(views.html.index.render(
-                Project.findInvolving(request().username()),
-                Task.findTodoInvolving(request().username()),
-                StudentMember.find.byId(request().username())
+                //Project.findInvolving(request().username()),
+                //Task.findTodoInvolving(request().username()),
+                //StudentMember.find.byId(request().username())
+                "application is working"
                 ));
     }
 
