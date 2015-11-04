@@ -1,1 +1,3 @@
-web: target/start -Dhttp.port=${PORT} -DapplyEvolutions.default=true
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* Main
+
+-DapplyEvolutions.default=true
