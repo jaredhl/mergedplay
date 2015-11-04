@@ -1,5 +1,6 @@
 package controllers;
 
+import com.avaje.ebean.Model;
 import play.libs.*;
 import play.mvc.*;
 import play.data.*;
@@ -10,15 +11,22 @@ import views.html.*;
 
 public class Application extends Controller{
 
+    //TODO: persistance
+    //TODO: login to form
+    //TODO: rest of tutorial
+    //login to see page, persist stored data, something something hibernate/ebean
+    //TODO: simple front end? (something better than raw template stuff)
+
     //annotation ensures a valid session is required to access page
     @Security.Authenticated(ActionAuthenticator.class)
     public Result index() {
+
+        //String firstName = new Model.Finder<String, StudentMember>(StudentMember.class).where().;
         return ok(views.html.index.render(
-                //Project.findInvolving(request().username()),
                 //Task.findTodoInvolving(request().username()),
                 //StudentMember.find.byId(request().username())
                 "application is working"
-                ));
+        ));
     }
 
     public Result login(){
@@ -36,7 +44,8 @@ public class Application extends Controller{
             session().clear();
             session("email", loginForm.get().email);
             return redirect(
-                    routes.Application.index()
+                    //invalid login: redirect to login page
+                    routes.Data.show()
             );
         }
 

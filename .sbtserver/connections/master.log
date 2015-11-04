@@ -1,7 +1,34 @@
-New log file opened at Tue Nov 03 00:41:34 EST 2015 by 51355@Scottys-MacBook-Pro.local
-Taking next connection to: 54618
-New client attempting to connect on port: 54619-54618
-  Address = /192.168.0.197:54618
-This client on port 54619 has uuid 6a7650e2-97f9-4b74-94ac-56fa55ce893e configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-6a7650e2-97f9-4b74-94ac-56fa55ce893e
-Taking next connection to: 54618
+New log file opened at Tue Nov 03 20:40:46 EST 2015 by 59199@Scottys-MacBook-Pro.local
+Taking next connection to: 63260
+New client attempting to connect on port: 63261-63260
+  Address = /172.16.6.163:63260
+This client on port 63261 has uuid d33fa4b8-3f9f-49db-a341-9f09e37debed configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-d33fa4b8-3f9f-49db-a341-9f09e37debed
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 63260

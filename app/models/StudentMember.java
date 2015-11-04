@@ -3,12 +3,19 @@ import play.data.validation.Constraints.*;
 import javax.persistence.*;
 import java.util.Calendar;
 
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Model;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Optional;
+
 
 /**
  * Created by cloftin on 10/3/15.
  */
 @Entity
-public class StudentMember extends play.db.ebean.Model{
+@AttributeOverride(name = "id", column = @Column(name="PID"))
+public class StudentMember extends Model{
 
 
     @Required
@@ -37,6 +44,10 @@ public class StudentMember extends play.db.ebean.Model{
 
     private String homeTown;
 
+    //search by PID to be safe?
+
+    public Finder<String, StudentMember> find = new Model.Finder(StudentMember.class); //not really sure what this does
+
     public StudentMember(String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -50,6 +61,11 @@ public class StudentMember extends play.db.ebean.Model{
     }
 
     public StudentMember(){}
+
+    public StudentMember findByFirstName(String firstName){
+        //returns a student member object corresponding to this firstName
+        return find.where().eq("firstName", firstName).findUnique();
+    }
 
     public String getSecondMajor() {
         return secondMajor;
@@ -138,6 +154,19 @@ public class StudentMember extends play.db.ebean.Model{
         }
         return "error";
     }
+
+    private List<StudentMember> allStudents = new ArrayList(); //arraylist of students
+
+    public StudentMember getByFirstName(String firstName){
+        //username is just firstname
+        for(StudentMember member : allStudents){
+            if(member.firstName.equals(firstName)){
+                return member; //return member with this name
+            }
+        }
+        return null;
+    }
+
 
     /*public StudentFormData makeUserFormData(){
         return new  StudentFormData(this.major, this.minor, this.classLevel, this.classYear, this.PID, this.homeTown);
