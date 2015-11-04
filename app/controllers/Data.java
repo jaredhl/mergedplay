@@ -28,15 +28,14 @@ public class Data extends Controller{
     //TODO: get form working from login
     //TODO: add login auth for all views
     //workflow for demo: user logs in,
+
     static Form<StudentMember> studentForm = Form.form(StudentMember.class);
 
     public Result show(){
 
-        //stuff below autofills the form
-        /*Map<String, String> toBind = new HashMap<String,String>();
-        toBind.put("firstName", "diane");
-        StudentMember student = studentForm.bind(toBind).get();
-        */
+        //if id is 0, we use the static form we created, otherwise we bind it from an existing student
+
+        //StudentMember = (id == 0) ? new StudentMember() : StudentMember.makeFromId(id);
 
         return ok(data.render(studentForm));
         //display an empty form to the user

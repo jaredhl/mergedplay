@@ -44,11 +44,14 @@ public class StudentMember extends Model{
 
     private String homeTown;
 
+    private long id;
+
     //search by PID to be safe?
 
     public Finder<String, StudentMember> find = new Model.Finder(StudentMember.class); //not really sure what this does
 
-    public StudentMember(String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
+    public StudentMember(long id, String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
+        this.id = id; //id field as a handle for searches, need a way to do this with email or something, fuck
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -66,6 +69,8 @@ public class StudentMember extends Model{
         //returns a student member object corresponding to this firstName
         return find.where().eq("firstName", firstName).findUnique();
     }
+
+    //I hate this framework
 
     public String getSecondMajor() {
         return secondMajor;
@@ -139,6 +144,14 @@ public class StudentMember extends Model{
         this.homeTown = homeTown;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
 
     public String getMajor() {
         return major;
@@ -157,14 +170,31 @@ public class StudentMember extends Model{
 
     private List<StudentMember> allStudents = new ArrayList(); //arraylist of students
 
-    public StudentMember getByFirstName(String firstName){
+    public StudentMember getById(long id){
         //username is just firstname
         for(StudentMember member : allStudents){
-            if(member.firstName.equals(firstName)){
+            if(member.id == id){
                 return member; //return member with this name
             }
         }
         return null;
+    }
+
+    public StudentMember makeFromId(long id){
+        //create an instance of user that can be bound to fill a form
+        for(StudentMember member : allStudents){
+            if(member.id == id){
+                //found it
+                return member;
+            }
+        }
+
+        return null;
+    }
+
+
+    public boolean getChrisToDoSomething(String plea, String task){
+        return false; //this is impossible
     }
 
 
