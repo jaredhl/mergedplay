@@ -5,8 +5,10 @@
 # Home page
 GET     /                           controllers.Application.index()
 
-GET     /data                       controllers.Data.show()
-POST    /data/post                  controllers.Data.post()
+GET     /member/new                 controllers.Data.create()
+POST    /member                     controllers.Data.save()
+
+GET     /add                        controllers.Data.add()
 
 GET     /test/page                  controllers.JDBC.page()
 GET     /test/create                controllers.JDBC.table()
@@ -14,6 +16,8 @@ GET     /test/:value                controllers.JDBC.test(value:String)
 
 GET     /login                      controllers.Application.login()
 POST    /login                      controllers.Application.authenticate()
+
+GET     /members                    controllers.Application.allUsers()
 
 GET     /logout                     controllers.Application.logout()
 # Map static resources from the /public folder to the /assets URL path

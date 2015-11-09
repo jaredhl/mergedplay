@@ -3,18 +3,20 @@ import play.data.validation.Constraints.*;
 import javax.persistence.*;
 import java.util.Calendar;
 
-import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Model;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;
 
 
+
+
 /**
  * Created by cloftin on 10/3/15.
  */
 @Entity
-@AttributeOverride(name = "id", column = @Column(name="PID"))
+//use the default id lookup for now, until we get search working
+//@AttributeOverride(name = "id", column = @Column(name="PID"))
 public class StudentMember extends Model{
 
 
@@ -44,12 +46,14 @@ public class StudentMember extends Model{
 
     private String homeTown;
 
+    @Id
     private long id;
 
     //search by PID to be safe?
 
-    public Finder<String, StudentMember> find = new Model.Finder(StudentMember.class); //not really sure what this does
+    public static Finder<Long, StudentMember> find = new Model.Finder<Long, StudentMember>(StudentMember.class); //not really sure what this does
 
+    //constructor
     public StudentMember(long id, String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
         this.id = id; //id field as a handle for searches, need a way to do this with email or something, fuck
         this.firstName = firstName;
@@ -69,8 +73,6 @@ public class StudentMember extends Model{
         //returns a student member object corresponding to this firstName
         return find.where().eq("firstName", firstName).findUnique();
     }
-
-    //I hate this framework
 
     public String getSecondMajor() {
         return secondMajor;
@@ -192,13 +194,4 @@ public class StudentMember extends Model{
         return null;
     }
 
-
-    public boolean getChrisToDoSomething(String plea, String task){
-        return false; //this is impossible
-    }
-
-
-    /*public StudentFormData makeUserFormData(){
-        return new  StudentFormData(this.major, this.minor, this.classLevel, this.classYear, this.PID, this.homeTown);
-    }*/
 }
