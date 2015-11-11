@@ -29,6 +29,12 @@ public class Application extends Controller{
         ));
     }
 
+    public Result profile() {
+        return ok(views.html.profile.render());
+    }
+    public Result search() {
+        return ok(views.html.search.render());
+    }
     public Result login(){
         Form<Login> loginForm = Form.form(Login.class);
         return ok(login.render(loginForm));
