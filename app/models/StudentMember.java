@@ -32,30 +32,27 @@ public class StudentMember extends Model{
     @Pattern("Freshman|Sophomore|Junior|Senior")
     public String classLevel;
 
-    private String gradYear;
+    public String gradYear;
 
     @Required
     @MinLength(8) //passwords must be at least 8 characters long
-    private String password;
+    public String password;
 
     @Required
     @MinLength(9)
     @MaxLength(9)
     @Pattern("^[0-9]*$")
-    private String PID; //PID is a string as it is displayed
+    public String PID; //PID is a string as it is displayed
 
-    private String homeTown;
+    public String homeTown;
 
-    @Id
-    private long id;
 
     //search by PID to be safe?
 
     public static Finder<Long, StudentMember> find = new Model.Finder<Long, StudentMember>(StudentMember.class); //not really sure what this does
 
     //constructor
-    public StudentMember(long id, String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
-        this.id = id; //id field as a handle for searches, need a way to do this with email or something, fuck
+    public StudentMember(String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -146,13 +143,6 @@ public class StudentMember extends Model{
         this.homeTown = homeTown;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
 
     public String getMajor() {
@@ -163,16 +153,16 @@ public class StudentMember extends Model{
         this.major = major;
     }
 
-    public String validate(){
+    /*public String validate(){
         if(Integer.valueOf(gradYear) < Calendar.getInstance().get(Calendar.YEAR)){
             return "Invalid graduation year";
         }
         return "error";
-    }
+    }*/
 
     private List<StudentMember> allStudents = new ArrayList(); //arraylist of students
 
-    public StudentMember getById(long id){
+    /*public StudentMember getById(long id){
         //username is just firstname
         for(StudentMember member : allStudents){
             if(member.id == id){
@@ -180,18 +170,7 @@ public class StudentMember extends Model{
             }
         }
         return null;
-    }
+    }*/
 
-    public StudentMember makeFromId(long id){
-        //create an instance of user that can be bound to fill a form
-        for(StudentMember member : allStudents){
-            if(member.id == id){
-                //found it
-                return member;
-            }
-        }
-
-        return null;
-    }
 
 }

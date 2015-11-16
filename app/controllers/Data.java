@@ -46,20 +46,20 @@ public class Data extends Controller{
     @play.db.ebean.Transactional
     public Result save(){
 
-        //cheat and use an in memory database?
-        //TODO: login, fill out form, submit, logout, log back in, form should fill up
-        //want to associate login with form data and pull accordingly
         Form<StudentMember> boundForm = form(StudentMember.class).bindFromRequest();
 
+        System.out.println("name: " + boundForm.get().firstName);
+
         if(boundForm.hasErrors()){
-            //check if form created from request is bad
             return badRequest(data.render(boundForm));
         } else {
 
+            //TODO: validation errors mean that this operation could return null (nothing is saved)
             boundForm.get().save();
-            //StudentMember member = boundForm.get();
-            //declare a enw finder here?
-            /*Model.Finder<String, StudentMember> find = new Model.Finder(StudentMember.class);
+
+            /*StudentMember member = boundForm.get();
+            //declare a new finder here?
+            Model.Finder<String, StudentMember> find = new Model.Finder(StudentMember.class);
             StudentMember existing = (StudentMember) find.where().eq("firstName", member.firstName);
 
             if(existing != null){
@@ -68,6 +68,7 @@ public class Data extends Controller{
             }*/
 
             //TODO: save not working for some reason...
+            //okay, save works now, get it working with form data, then work on search
 
             //com.avaje.ebean.Ebean.save(member);
             //member.save();
@@ -84,6 +85,12 @@ public class Data extends Controller{
         student.setMajor("nothing");
         student.save();
         return ok("record is added");
+    }
+
+    public List<StudentMember> find(String firstNameQuery){
+        //takes a query for a first name and returns a list of results
+        List<StudentMember> members = StudentMember.find.where().like("firstName", "firstNameQuery").findList();
+        return members;
     }
 
     /*public Result post(){

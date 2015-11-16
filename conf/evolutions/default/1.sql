@@ -4,7 +4,6 @@
 # --- !Ups
 
 create table student_member (
-  id                        bigint not null,
   first_name                varchar(255),
   last_name                 varchar(255),
   major                     varchar(255),
@@ -14,11 +13,8 @@ create table student_member (
   grad_year                 varchar(255),
   password                  varchar(255),
   pid                       varchar(255),
-  home_town                 varchar(255),
-  constraint pk_student_member primary key (id))
+  home_town                 varchar(255))
 ;
-
-create sequence student_member_seq;
 
 
 
@@ -30,6 +26,4 @@ SET REFERENTIAL_INTEGRITY FALSE;
 drop table if exists student_member;
 
 SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists student_member_seq;
 

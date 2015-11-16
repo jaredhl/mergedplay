@@ -33,7 +33,20 @@ public class Application extends Controller{
         return ok(views.html.profile.render());
     }
     public Result search() {
-        return ok(views.html.search.render());
+
+        //need this to handle the resulting string
+        Form<Search> search_form = Form.form(Search.class).bindFromRequest();
+        List<StudentMember> members;
+
+        if(search_form.get().query == null){
+            //no query yet, render just the search card
+            members = new LinkedList();
+        } else {
+            //need to add some stuff to the database first
+            members = StudentMember.find.where().like("firstName", search_form.get().query).findList();
+        }
+
+        return ok(views.html.search.render(members,search_form));
     }
     public Result login(){
         Form<Login> loginForm = Form.form(Login.class);

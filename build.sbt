@@ -7,8 +7,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
 
 scalaVersion := "2.11.6"
 
-Play2WarPlugin.play2WarSettings
-Play2WarKeys.servletVersion := "3.0"
+//Play2WarPlugin.play2WarSettings
+//Play2WarKeys.servletVersion //:= "3.0"
 
 
 libraryDependencies ++= Seq(
@@ -25,4 +25,4 @@ libraryDependencies ++= Seq(
 routesGenerator := InjectedRoutesGenerator
 
 
-fork in run := true
+//fork in run := true

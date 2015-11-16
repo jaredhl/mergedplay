@@ -10,12 +10,15 @@
         @helper.form(action = routes.Data.save()){
             @helper.inputText(studentForm("firstName"))
             @helper.inputText(studentForm("lastName"))
+            @helper.inputText(studentForm("gradYear"))
             @helper.inputText(studentForm("email"))
+            @helper.inputText(studentForm("password"))
+            @helper.inputText(studentForm("homeTown"))
             @helper.inputText(studentForm("major"))
-            @helper.inputText(studentForm("minor"))
+            @helper.inputText(studentForm("secondMajor"))
             @helper.inputText(studentForm("PID"))
             @helper.inputRadioGroup(
-                studentForm("classYear"),
+                studentForm("classLevel"),
                 options = Seq("Freshman"->"Freshman","Sophomore"->"Sophomore","Junior"->"Junior","Senior"->"Senior"),
                 '_label -> "Year",
                 '_error -> None

@@ -1,3 +1,4 @@
+@(membersList: List[StudentMember], searchForm: play.data.Form[controllers.Search]) <!--- gets rendered with a list from the database --->
 <!DOCTYPE html>
 <html>
   <head>
@@ -70,27 +71,37 @@
 
             </style>
 
+
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto">
               <div class="mdl-card__title">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                                      mdl-textfield--floating-label">
-                  <label class="mdl-button mdl-js-button mdl-button--icon" for="search-expandable2">
-                    <i class="material-icons material-icons.md-dark" style="color: rgba(0, 0, 0, 0.54);">search</i>
-                  </label>
+                  @helper.form(routes.Application.search()){
+
+                  <!---button--->
+                  <button type="submit" name="action" value="search">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-expandable2">
+                      <i class="material-icons material-icons.md-dark" style="color: rgba(0, 0, 0, 0.54);">search</i>
+                    </label>
+                  </button>
+                  <!---end button--->
                   <div class="mdl-textfield__expandable-holder">
 
-                    <input class="mdl-textfield__input" type="text" id="search-expandable2" style="position: absolute; bottom: 0; color: rgb(3, 169, 244); border-bottom-color: rgba(0,0,0,0); border-bottom: solid; border-bottom-color: rgb(3, 169, 244); font-size: 24px;">
-
+                    <input name="query" class="mdl-textfield__input" type="String" id="search-expandable2" value="@searchForm("query").value" style="position: absolute; bottom: 0; color: rgb(3, 169, 244); border-bottom-color: rgba(0,0,0,0); border-bottom: solid; border-bottom-color: rgb(3, 169, 244); font-size: 24px;">
                     <label class="mdl-textfield__label" for="search-expandable2">
                                             Search User
                     </label>
                   </div>
+
+
+                  }
                 </div>
               </div>
               <div class="mdl-card__supporting-text">
                                 Search for a Campus Y member or Alumni.  You can also search by location, experience or other tags associated with users.
               </div>
             </div>
+
 
 
 
@@ -112,6 +123,40 @@
             }
             </style>
 
+            <!--- cards start here --->
+            @for(member <- membersList){
+              <!---render a card for each returned result--->
+              <!---whoe page gets re-rendered on each search--->
+              <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto; margin-top: 20px;">
+                <div class="mdl-card__title">
+                  <style>
+                  .mdl-card__title-text {
+                  color: rgba(0, 0, 0, .54);
+                  }
+                  .mdl-card__title-text li {
+                  font-size: 14px;
+                  }
+                  </style>
+                  <img src="@routes.Assets.versioned("images/richard-2.jpg")" style='height: 144px; width: 144px;'>
+                  <h2 class="mdl-card__title-text" style=' float: left; position: absolute; top: 16px; padding-left: 5px;> @member.firstName @member.lastName</h2>
+                  <ul class='mdl-card__title-text' style="padding-left: 5px; flex-direction: column; position: relative; top: 0;">
+                    <li>@member.firstName</li>
+                  </ul>
+                </div>
+                <div class="mdl-card__supporting-text">
+                                I am an alumni of UNC and the current director of UNC Campus Y.  I have spent several years in Budapest and have extensive experience
+                  leading social justice organizations in various other European countries.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                    Message Richard
+                  </a>
+                </div>
+              </div>
+            }
+
+
+            <!--- old cards
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto; margin-top: 20px;">
               <div class="mdl-card__title">
                 <style>
@@ -142,9 +187,10 @@
                                     Message Richard
                 </a>
               </div>
-            </div>
+            </div> --->
 
 
+            <!--- old card
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto; margin-top: 20px;">
               <div class="mdl-card__title">
                 <style>
@@ -174,7 +220,8 @@
                                     Message Lauren
                 </a>
               </div>
-            </div>
+            </div> --->
+
 
           </div>
         </section>
