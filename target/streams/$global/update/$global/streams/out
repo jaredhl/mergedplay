@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for play17#play17_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies play17#play17_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6974eb3c[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@52daba79[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.6[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.6 in sbt-chain[0m
@@ -7472,7 +7472,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5353ms :: artifacts dl 177ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5681ms :: artifacts dl 220ms[0m
 [0m[[0mdebug[0m] [0m	report for play17#play17_2.11;1.0 compile produced in C:\Users\Jared\Documents\CampusY\play17\target\resolution-cache\reports\play17-play17_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for play17#play17_2.11;1.0 runtime produced in C:\Users\Jared\Documents\CampusY\play17\target\resolution-cache\reports\play17-play17_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for play17#play17_2.11;1.0 test produced in C:\Users\Jared\Documents\CampusY\play17\target\resolution-cache\reports\play17-play17_2.11-test.xml[0m
@@ -7486,5 +7486,5 @@
 [0m[[0mdebug[0m] [0m	report for play17#play17_2.11;1.0 docs produced in C:\Users\Jared\Documents\CampusY\play17\target\resolution-cache\reports\play17-play17_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for play17#play17_2.11;1.0 pom produced in C:\Users\Jared\Documents\CampusY\play17\target\resolution-cache\reports\play17-play17_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for play17#play17_2.11;1.0 scala-tool produced in C:\Users\Jared\Documents\CampusY\play17\target\resolution-cache\reports\play17-play17_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (5353ms resolve - 177ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (5681ms resolve - 220ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

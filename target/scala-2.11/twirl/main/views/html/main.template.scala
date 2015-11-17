@@ -53,7 +53,7 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 16 23:05:59 EST 2015
+                  DATE: Mon Nov 16 23:13:49 EST 2015
                   SOURCE: C:/Users/Jared/Documents/CampusY/play17/app/views/main.scala.html
                   HASH: f94ea80224674e01a4d3b44c37f5875e1ed2d1ee
                   MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1336->315|1351->321|1417->366|1511->433|1539->440|1571->445

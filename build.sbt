@@ -10,6 +10,6 @@ libraryDependencies ++= Seq( javaJdbc , javaEbean , cache , javaWs )
 
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )
 
-javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
+javacOptions ++= Seq("-source", "1.6", "-target", "1.6")
 
-javaHome := Some(file("C:\\Program Files\\Java\\jdk1.7.0"))
+//JavaHome := Some(file("C:\\Program Files\\Java\\jdk1.7.0"))
