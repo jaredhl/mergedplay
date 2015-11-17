@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Jared/Documents/CampusY/play17/conf/routes
 // @HASH:35cc300075f0193e6cddbcfb63f508610f0c266c
-// @DATE:Mon Nov 16 22:46:21 EST 2015
+// @DATE:Mon Nov 16 23:05:58 EST 2015
 
 
 import play.core._
