@@ -1,0 +1,11 @@
+[0m[[0minfo[0m] [0mPackaging C:\Users\Jared\Documents\CampusY\play17\target\scala-2.11\play17_2.11-1.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	application.conf[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Jared\Documents\CampusY\play17\conf\application.conf[0m
+[0m[[0mdebug[0m] [0m	openshift.conf[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Jared\Documents\CampusY\play17\conf\openshift.conf[0m
+[0m[[0mdebug[0m] [0m	routes[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Jared\Documents\CampusY\play17\conf\routes[0m
+[0m[[0mdebug[0m] [0m	controllers\Application.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Jared\Documents\CampusY\play17\app\controllers\Application.java[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
