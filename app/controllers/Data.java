@@ -31,7 +31,7 @@ public class Data extends Controller{
 
     //static Form<StudentMember> studentForm = Form.form(StudentMember.class);
 
-    public Result create(){
+    public static Result create(){
 
         //if id is 0, we use the static form we created, otherwise we bind it from an existing student
 
@@ -44,7 +44,7 @@ public class Data extends Controller{
     }
 
     @play.db.ebean.Transactional
-    public Result save(){
+    public static Result save(){
 
         Form<StudentMember> boundForm = form(StudentMember.class).bindFromRequest();
 
@@ -78,7 +78,7 @@ public class Data extends Controller{
 
     }
 
-    public Result add(){
+    public static Result add(){
         //adds a dummy entry to the db
         StudentMember student = new StudentMember();
         student.setFirstName("Scott");
@@ -87,7 +87,7 @@ public class Data extends Controller{
         return ok("record is added");
     }
 
-    public List<StudentMember> find(String firstNameQuery){
+    public static List<StudentMember> find(String firstNameQuery){
         //takes a query for a first name and returns a list of results
         List<StudentMember> members = StudentMember.find.where().like("firstName", "firstNameQuery").findList();
         return members;

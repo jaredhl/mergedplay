@@ -7,7 +7,7 @@
     <title>Campus Y User</title>
     <!--<link rel="stylesheet" href="profile.css" />-->
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/material.min.css")"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/material.min.css")"/>
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="import" href="bower_components/paper-button/paper-button.html">
@@ -19,7 +19,7 @@
   even in small screens. -->
 <style>
     body  {
-        background-image: url("@routes.Assets.versioned("images/Campus Y Background.jpg")");
+        background-image: url("@routes.Assets.at("images/Campus Y Background.jpg")");
         background-size: cover;
     }
 </style>
@@ -80,7 +80,7 @@
 
             <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title">
-                    <img class="mdl-card__title" src="@routes.Assets.versioned("images/defaultUserPic.png")" alt="Default User Pic">
+                    <img class="mdl-card__title" src="@routes.Assets.at("images/defaultUserPic.png")" alt="Default User Pic">
                     <ul>
                         <li><span class="mdl-badge" data-badge="7"></span>Spanish</li>
                         <li><span class="mdl-badge" data-badge="5"></span>Southeast Asia</li>

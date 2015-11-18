@@ -3,7 +3,7 @@ import play.data.validation.Constraints.*;
 import javax.persistence.*;
 import java.util.Calendar;
 
-import com.avaje.ebean.Model;
+import play.db.ebean.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;

@@ -4,7 +4,7 @@
 		module="play17_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151116231755"
+		publication="20151118150123"
 	>
 		<description>
 		play17
@@ -24,6 +24,7 @@
 		<conf name="docs" visibility="private" description=""/>
 		<conf name="pom" visibility="public" description=""/>
 		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="fork-run" visibility="private" description=""/>
 	</configurations>
 	<publications>
 		<artifact name="play17_2.11" type="pom" ext="pom" conf="pom"/>
@@ -39,6 +40,7 @@
 		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.3.8" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-docs_2.11" rev="2.3.8" conf="docs->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java_2.11" rev="2.3.8" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="fork-run_2.11" rev="2.3.8" conf="fork-run->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.3.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ebean_2.11" rev="2.3.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.3.8" conf="compile->default(compile)"/>
