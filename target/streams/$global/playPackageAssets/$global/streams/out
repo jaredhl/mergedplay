@@ -1,0 +1,27 @@
+[info] Packaging C:\Users\Jared\Documents\CampusY\mergedplay\target\play17-1.0-assets.jar ...
+[debug] Input file mappings:
+[debug] 	public/images\favicon.png
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\images\favicon.png
+[debug] 	public/images\Lauren-2.jpg
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\images\Lauren-2.jpg
+[debug] 	public/javascripts\hello.js
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\javascripts\hello.js
+[debug] 	public/javascripts\jquery-1.9.0.min.js
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\javascripts\jquery-1.9.0.min.js
+[debug] 	public/images\richard-2.jpg
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\images\richard-2.jpg
+[debug] 	public/images\defaultUserPic.png
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\images\defaultUserPic.png
+[debug] 	public/stylesheets\main.css
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\stylesheets\main.css
+[debug] 	public/javascripts
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\javascripts
+[debug] 	public/stylesheets
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\stylesheets
+[debug] 	public/images\Campus Y Background.jpg
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\images\Campus Y Background.jpg
+[debug] 	public/stylesheets\material.min.css
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\stylesheets\material.min.css
+[debug] 	public/images
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\public\images
+[info] Done packaging.

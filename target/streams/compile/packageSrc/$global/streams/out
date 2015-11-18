@@ -1,0 +1,33 @@
+[info] Packaging C:\Users\Jared\Documents\CampusY\mergedplay\target\scala-2.11\play17_2.11-1.0-sources.jar ...
+[debug] Input file mappings:
+[debug] 	evolutions
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\evolutions
+[debug] 	controllers\ActionAuthenticator.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\controllers\ActionAuthenticator.java
+[debug] 	evolutions\default\1.sql
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\evolutions\default\1.sql
+[debug] 	application.conf
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\application.conf
+[debug] 	logback.xml
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\logback.xml
+[debug] 	db\jdbc\SampleDB.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\db\jdbc\SampleDB.java
+[debug] 	controllers\Application.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\controllers\Application.java
+[debug] 	controllers\Data.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\controllers\Data.java
+[debug] 	models\StudentMember.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\models\StudentMember.java
+[debug] 	controllers\Login.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\controllers\Login.java
+[debug] 	routes
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\routes
+[debug] 	evolutions\default
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\evolutions\default
+[debug] 	openshift.conf
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\conf\openshift.conf
+[debug] 	controllers\JDBC.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\controllers\JDBC.java
+[debug] 	controllers\Search.java
+[debug] 	  C:\Users\Jared\Documents\CampusY\mergedplay\app\controllers\Search.java
+[info] Done packaging.

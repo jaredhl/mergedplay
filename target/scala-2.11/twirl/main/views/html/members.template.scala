@@ -49,7 +49,7 @@ Seq[Any](format.raw/*1.36*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 18 15:01:25 EST 2015
+                  DATE: Wed Nov 18 15:18:22 EST 2015
                   SOURCE: C:/Users/Jared/Documents/CampusY/mergedplay/app/views/members.scala.html
                   HASH: 0f65fa51b33f906fefce661e1f1ced7df86e7927
                   MATRIX: 738->1|860->35|888->37|951->74|970->85|997->92|1025->93|1082->125|1123->151|1161->152|1193->158|1260->199|1274->205|1304->215|1349->234|1363->240|1389->246|1438->265|1467->267

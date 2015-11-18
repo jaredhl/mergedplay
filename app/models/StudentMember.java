@@ -49,7 +49,7 @@ public class StudentMember extends Model{
 
     //search by PID to be safe?
 
-    public static Finder<Long, StudentMember> find = new Model.Finder<Long, StudentMember>(StudentMember.class); //not really sure what this does
+    public static Finder<Long, StudentMember> find = new Model.Finder<Long, StudentMember>(Long.class, StudentMember.class); //not really sure what this does
 
     //constructor
     public StudentMember(String firstName, String lastName, String major, String minor, String classLevel, String email, String PID, String hometown){
