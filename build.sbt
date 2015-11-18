@@ -1,4 +1,4 @@
-name := "play17"
+name := "mergedplay"
 
 version := "1.0"
 
