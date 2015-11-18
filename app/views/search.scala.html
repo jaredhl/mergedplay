@@ -1,0 +1,252 @@
+@(membersList: List[StudentMember], searchForm: play.data.Form[controllers.Search]) <!--- gets rendered with a list from the database --->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Search for a User</title>
+      <!--<link rel="stylesheet" href="profile.css" />-->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/material.min.css")"/>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+
+  </head>
+  <body>
+      <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+             mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <style>
+        .mdl-layout__header-row {
+        margin: auto;
+        }
+        </style>
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+          <span class="mdl-layout-title">Search for a Campus Y User</span>
+        </div>
+          <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Search</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab">About</a>
+          <a href="#fixed-tab-3" class="mdl-layout__tab">Help</a>
+        </div>
+      </header>
+        <!--<div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Title</span>
+            </div>-->
+
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+          <style>
+          .page-content {
+          min-height: 100vh;
+          //background-color: grey;
+          }
+          .mdl-textfield {
+          margin-left: 10px;
+          width: 95%;
+          }
+          .material-icons {
+          font-size: 48px;
+          }
+
+          </style>
+          <div class="page-content" style="background-image: url('@routes.Assets.versioned("images/Campus Y Background.jpg")'); background-size: cover; padding-bottom: 50px;">
+              <!-- Wide card with share menu button -->
+            <style>
+            .demo-card-wide.mdl-card {
+            width: 512px;
+            }
+            .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 176px;
+            background: url('../assets/demos/welcome_card.jpg') center / cover;
+            }
+            .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+            }
+
+            </style>
+
+
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto">
+              <div class="mdl-card__title">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                                     mdl-textfield--floating-label">
+                  @helper.form(routes.Application.search()){
+
+                  <!---button--->
+                  <button type="submit" name="action" value="search">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-expandable2">
+                      <i class="material-icons material-icons.md-dark" style="color: rgba(0, 0, 0, 0.54);">search</i>
+                    </label>
+                  </button>
+                  <!---end button--->
+                  <div class="mdl-textfield__expandable-holder">
+
+                    <input name="query" class="mdl-textfield__input" type="String" id="search-expandable2" value="@searchForm("query").value" style="position: absolute; bottom: 0; color: rgb(3, 169, 244); border-bottom-color: rgba(0,0,0,0); border-bottom: solid; border-bottom-color: rgb(3, 169, 244); font-size: 24px;">
+                    <label class="mdl-textfield__label" for="search-expandable2">
+                                            Search User
+                    </label>
+                  </div>
+
+
+                  }
+                </div>
+              </div>
+              <div class="mdl-card__supporting-text">
+                                Search for a Campus Y member or Alumni.  You can also search by location, experience or other tags associated with users.
+              </div>
+            </div>
+
+
+
+
+
+
+
+              <!-- Wide card with share menu button -->
+            <style>
+            .demo-card-wide.mdl-card {
+            width: 512px;
+            }
+            .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 176px;
+            //background: url('richard.jpg');
+            }
+            .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+            }
+            </style>
+
+            <!--- cards start here --->
+            @for(member <- membersList){
+              <!---render a card for each returned result--->
+              <!---whoe page gets re-rendered on each search--->
+              <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto; margin-top: 20px;">
+                <div class="mdl-card__title">
+                  <style>
+                  .mdl-card__title-text {
+                  color: rgba(0, 0, 0, .54);
+                  }
+                  .mdl-card__title-text li {
+                  font-size: 14px;
+                  }
+                  </style>
+                  <img src="@routes.Assets.versioned("images/richard-2.jpg")" style='height: 144px; width: 144px;'>
+                  <h2 class="mdl-card__title-text" style=' float: left; position: absolute; top: 16px; padding-left: 5px;> @member.firstName @member.lastName</h2>
+                  <ul class='mdl-card__title-text' style="padding-left: 5px; flex-direction: column; position: relative; top: 0;">
+                    <li>@member.firstName</li>
+                  </ul>
+                </div>
+                <div class="mdl-card__supporting-text">
+                                I am an alumni of UNC and the current director of UNC Campus Y.  I have spent several years in Budapest and have extensive experience
+                  leading social justice organizations in various other European countries.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                    Message Richard
+                  </a>
+                </div>
+              </div>
+            }
+
+
+            <!--- old cards
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto; margin-top: 20px;">
+              <div class="mdl-card__title">
+                <style>
+                .mdl-card__title-text {
+                color: rgba(0, 0, 0, .54);
+                }
+                .mdl-card__title-text li {
+                font-size: 14px;
+                }
+                </style>
+                <img src="@routes.Assets.versioned("images/richard-2.jpg")" style='height: 144px; width: 144px;'>
+                <h2 class="mdl-card__title-text" style=' float: left; position: absolute; top: 16px; padding-left: 5px;'>Richard Harrill</h2>
+                <ul class='mdl-card__title-text' style="padding-left: 5px; flex-direction: column; position: relative; top: 0;">
+                  <li> Columbia School of Social Work</li>
+                  <li> Peace Corps</li>
+                  <li> Demokratikus Ifjusagert Alapitvany </li>
+                  <li> Hungary</li>
+                  <li> UNC B.A.</li>
+                  <li> UNC J.D.</li>
+                </ul>
+              </div>
+              <div class="mdl-card__supporting-text">
+                                I am an alumni of UNC and the current director of UNC Campus Y.  I have spent several years in Budapest and have extensive experience
+                leading social justice organizations in various other European countries.
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                    Message Richard
+                </a>
+              </div>
+            </div> --->
+
+
+            <!--- old card
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin: auto; margin-top: 20px;">
+              <div class="mdl-card__title">
+                <style>
+                .mdl-card__title-text {
+                color: rgba(0, 0, 0, .54);
+                }
+                .mdl-card__title-text li {
+                font-size: 14px;
+                }
+                </style>
+                <img src="@routes.Assets.versioned("images/Lauren-2.jpg")" style='height: 144px; width: 144px;'>
+                <h2 class="mdl-card__title-text" style=' float: left; position: absolute; top: 16px; padding-left: 5px;'>Lauren Eaves</h2>
+                <ul class='mdl-card__title-text' style="padding-left: 5px; flex-direction: column; position: relative; top: 0;">
+                  <li> Bolivian Street Children Project</li>
+                  <li> Bolivia</li>
+                  <li> The Water Project</li>
+                  <li> England</li>
+                  <li> UNC B.A.</li>
+                </ul>
+              </div>
+              <div class="mdl-card__supporting-text">
+                                I graduated this year from UNC with a BA in Biology and am currently working with Campus Y on their student and alumni outreach efforts.
+                After my experience working with the Bolivian Street Children Project, I have become interested in homelessness and water access issues in South America.
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                    Message Lauren
+                </a>
+              </div>
+            </div> --->
+
+
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+      </main>
+      <footer class="mdl-mini-footer" style="padding-top: 5px; padding-bottom: 5px;">
+        <style>
+        footer {
+        float: right;
+        }
+        </style>
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">Title</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Campus Y User</title>
+    <!--<link rel="stylesheet" href="profile.css" />-->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/material.min.css")"/>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+</head>
+
+<body>
+<!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
+<style>
+    body  {
+        background-image: url("@routes.Assets.versioned("images/Campus Y Background.jpg")");
+        background-size: cover;
+    }
+</style>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+             mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                         mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="fixed-header-drawer-exp">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample"
+                           id="fixed-header-drawer-exp">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Profile Options</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Edit Profile</a>
+            <a class="mdl-navigation__link" href="">Manage Resume</a>
+            <a class="mdl-navigation__link" href="">Favorites</a>
+            <a class="mdl-navigation__link" href="">Messages</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <!-- Wide card with share menu button -->
+            <style>
+                .demo-card-wide.mdl-card {
+                    width: 512px;
+                    margin: 0 auto;
+                }
+                .demo-card-wide > .mdl-card__title {
+                    color:  #fff;
+                    height: 176px;
+                    background-color: rgb(3, 169, 244);
+                //background: url('../assets/demos/welcome_card.jpg') center / cover;
+                }
+                .demo-card-wide > .mdl-card__title ul {
+                    list-style-type: none;
+                    columns: 2;
+                }
+                .demo-card-wide > .mdl-card__menu {
+                    color: #fff;
+                }
+                .demo-card-wide mdl-card__supporting-text {
+                    color: #fff;
+                    font-size: 8px;
+                }
+            </style>
+
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <img class="mdl-card__title" src="@routes.Assets.versioned("images/defaultUserPic.png")" alt="Default User Pic">
+                    <ul>
+                        <li><span class="mdl-badge" data-badge="7"></span>Spanish</li>
+                        <li><span class="mdl-badge" data-badge="5"></span>Southeast Asia</li>
+                        <li><span class="mdl-badge" data-badge="2"></span>Indonesia</li>
+                        <li><span class="mdl-badge" data-badge="2"></span>Amnesty International</li>
+                    </ul>
+                    <!--<h2 class="mdl-card__title-text">Welcome</h2>-->
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <span id="PersonalInfoText">
+                    <p>53 Banim Street<br>London<br>W60DN<br>United Kingdom<br>Birthday: 11/13/1978</p>
+                    </span>
+                            <span id="ProfessionalInfo">
+                                <p>DHL<br>Sustainability Director<br>Ocean House, The Ring<br>Brackenell<br>England<br>RG121AN<br>United Kingdom</p>
+                            </span>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        Message
+                    </a>
+                </div>
+                <div class="mdl-card__menu">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                        <i class="material-icons">share</i>
+                    </button>
+                </div>
+            </div>
+            <!-- Your content goes here -->
+        </div>
+    </main>
+    <footer class="mdl-mini-footer" style="padding-top: 5px; padding-bottom: 5px;">
+        <style>
+            footer {
+                float: right;
+            }
+        </style>
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">Title</div>
+            <ul class="mdl-mini-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+
+@(loginForm: play.data.Form[controllers.Login])
+<html>
+    <head>
+        <title>Y connect</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("stylesheets/login.css")">
+    </head>
+    <body>
+        <header>
+            <a href="@routes.Application.index()" id="logo"><span>Y</span>Connect</a>
+            <dl id="user">
+                <dt>User</dt>
+                <dd>
+                    <a href="@routes.Application.logout()">Logout</a>
+                </dd>
+            </dl>
+        </header>
+        @helper.form(routes.Application.authenticate) {
+            <h1>Sign in</h1>
+            @if(loginForm.hasGlobalErrors) {
+                <p class="error">
+                @loginForm.globalError.message
+                </p>
+            }
+            @if(flash.contains("success")) {
+                <p class="success">
+                @flash.get("success")
+                </p>
+            }
+            <p>
+                <input type="email" name="email" placeholder="Email" value="@loginForm("email").value">
+            </p>
+            <p>
+                <input type="password" name="password" placeholder="Password">
+            </p>
+            <p>
+                <button type="submit">Login</button>
+            </p>
+        }
+
+    </body>
+</html>

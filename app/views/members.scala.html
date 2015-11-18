@@ -1,0 +1,12 @@
+@(membersList: List[StudentMember])
+<html>
+    <head>
+        <title> @membersList.size() members </title>
+    </head>
+@for(member <- membersList){
+    <div class="gesture-item">
+        <h2>@member.firstName</h2>
+        <p>@member.major</p>
+    </div>
+}
+</html>
